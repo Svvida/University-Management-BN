@@ -1,0 +1,13 @@
+nelmio_cors:
+    defaults:
+        allow_credentials: false
+        allow_origin: ['*']  #! You need to change it later!
+        allow_headers: ['*']
+        allow_methods: ['GET', 'OPTIONS', 'POST', 'PUT', 'DELETE']
+        expose_headers: []
+        max_age: 3600
+        hosts: []
+        origin_regex: false
+        forced_allow_origin_value: null
+    paths:
+        '^/': null
