@@ -13,11 +13,11 @@ class Specializations
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(length: 100)]
-    private ?string $specializationName = null;
+    #[ORM\Column(length: 255)]
+    private ?string $SpecializationName = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $description = null;
+    #[ORM\Column(length: 255)]
+    private ?string $Description = null;
 
     public function getId(): ?int
     {
@@ -26,24 +26,24 @@ class Specializations
 
     public function getSpecializationName(): ?string
     {
-        return $this->specializationName;
+        return $this->SpecializationName;
     }
 
-    public function setSpecializationName(string $specializationName): static
+    public function setSpecializationName(string $SpecializationName): static
     {
-        $this->specializationName = $specializationName;
+        $this->SpecializationName = $SpecializationName;
 
         return $this;
     }
 
     public function getDescription(): ?string
     {
-        return $this->description;
+        return $this->Description;
     }
 
-    public function setDescription(?string $description): static
+    public function setDescription(string $Description): static
     {
-        $this->description = $description;
+        $this->Description = $Description;
 
         return $this;
     }
