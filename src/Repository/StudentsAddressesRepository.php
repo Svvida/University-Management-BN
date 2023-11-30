@@ -2,27 +2,27 @@
 
 namespace App\Repository;
 
-use App\Entity\Specializations;
+use App\Entity\StudentsAddresses;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<Specializations>
+ * @extends ServiceEntityRepository<StudentsAddresses>
  *
- * @method Specializations|null find($id, $lockMode = null, $lockVersion = null)
- * @method Specializations|null findOneBy(array $criteria, array $orderBy = null)
- * @method Specializations[]    findAll()
- * @method Specializations[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method StudentsAddresses|null find($id, $lockMode = null, $lockVersion = null)
+ * @method StudentsAddresses|null findOneBy(array $criteria, array $orderBy = null)
+ * @method StudentsAddresses[]    findAll()
+ * @method StudentsAddresses[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class SpecializationsRepository extends ServiceEntityRepository
+class StudentsAddressesRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Specializations::class);
+        parent::__construct($registry, StudentsAddresses::class);
     }
 
 //    /**
-//     * @return Specializations[] Returns an array of Specializations objects
+//     * @return StudentsAddresses[] Returns an array of StudentsAddresses objects
 //     */
 //    public function findByExampleField($value): array
 //    {
@@ -36,7 +36,7 @@ class SpecializationsRepository extends ServiceEntityRepository
 //        ;
 //    }
 
-//    public function findOneBySomeField($value): ?Specializations
+//    public function findOneBySomeField($value): ?StudentsAddresses
 //    {
 //        return $this->createQueryBuilder('s')
 //            ->andWhere('s.exampleField = :val')
