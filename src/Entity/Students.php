@@ -26,8 +26,8 @@ class Students
     #[ORM\Column(length: 11)]
     private ?string $PESEL = null;
 
-    #[ORM\Column]
-    private ?bool $Gender = null;
+    #[ORM\Column(length: 21)]
+    private ?string $Gender = null;
 
     #[ORM\OneToOne(cascade: ['persist', 'remove'])]
     #[ORM\JoinColumn(nullable: false)]
@@ -86,12 +86,12 @@ class Students
         return $this;
     }
 
-    public function isGender(): ?bool
+    public function getGender(): ?string
     {
         return $this->Gender;
     }
 
-    public function setGender(bool $Gender): static
+    public function setGender(string $Gender): static
     {
         $this->Gender = $Gender;
 
